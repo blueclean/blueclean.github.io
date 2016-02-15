@@ -1,0 +1,35 @@
+<div id="profile">
+    <center class="panel-left">
+        <a href="/{{ site.baseurl }}" title="link to home of {{ site.title }}">
+            <img src="{{ "/images/profile.jpg" | prepend: site.baseurl }}" alt="Profile Picture" class="user-image">
+            <h2 class="profile-title">{{ site.title }}</h2>
+        </a>
+        <hr>
+        <p>
+            {{ site.description }}
+        </p>
+    </center>
+    <hr class="profile-divider">
+</div>
+<div id="social">
+    <center>
+        <a class="social" href="https://www.github.com/{{ site.author.github_username }}" title="{{ site.author.github_username }} on GitHub" target="_blank">
+            <i class="fa fa-fw fa-2x fa-github-square"></i>
+        </a>
+        <a class="social" href="https://www.linkedin.com/in/{{ site.author.linkedin_username }}" title="{{ site.author.linkedin_username }} on LinkedIn" target="_blank">
+            <i class="fa fa-fw fa-2x fa-linkedin-square"></i>
+        </a>
+        <a class="social" href="mailto:{{ site.author.email }}" title="Email {{ site.author.email }}" target="_blank">
+            <i class="fa fa-fw fa-2x fa-envelope-square"></i>
+        </a>
+        <a class="social" href="{{ "feed.xml" | prepend: site.baseurl }}" title="Subscribe" target="_blank">
+            <i class="fa fa-fw fa-2x fa-rss-square"></i>
+        </a>
+    </center>
+    <hr class="profile-divider">
+</div>
+<div id="navigation">
+    <center>
+        <h3><a href="{{ site.baseurl }}" title="link to home of {{ site.title }}">Recent Posts</a></h3>
+    </center>
+</div>

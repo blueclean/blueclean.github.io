@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+      <div class="blog-head"></div>
+      <nav class="navbar-blue" role="navigation">
+          <div class="container">
+              <div class="navbar-header navbar-default navbar-blue">
+                  <button style="margin-top:20px;" type="button" class="navbar-toggle navbar-menu" data-toggle="collapse" data-target="#navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <h3 class="nav-title">
+                      <img src="{{ "/images/profile.jpg" | prepend: site.baseurl }}" alt="Profile Picture" class="user-image-small">
+                      &nbsp;
+                      <a href="{{ site.baseurl }}" title="link to home of {{ site.title }}">
+                          {{ site.title }}
+                      </a>
+                  </h3>
+              </div>
+              <div class="collapse navbar-collapse navbar-default custom-menu" id="navbar-collapse-1">
+                  <ul class="nav navbar-nav client-nav navbar-right">
+                      <li><a href="{{ site.baseurl }}" title="link to home of {{ site.title }}">Recent Posts</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-3 col-sm-offset-1">
+                  {% include header.html %}
+              </div>
+              <div class="col-md-8 panel-right">
+                  <div class="content-wrapper">
+                      {{ content }}
+                      <div class="footer-copyright">
+                          <span>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. All rights reserved.</span>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+      {% include footer.html %}
+  </body>
+</html>
